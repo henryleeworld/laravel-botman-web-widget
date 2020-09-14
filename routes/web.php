@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\BotManController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +15,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('botman');
 });
 
-Route::match(['get', 'post'], '/botman', 'BotManController@handle');
+Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);

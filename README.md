@@ -1,4 +1,4 @@
-# Laravel 6 QR 聊天機器人網頁小工具
+# Laravel 8 聊天機器人網頁小工具
 
 引入 botman 的 botman／driver-web 套件來擴增聊天機器人框架，目的是回應訂餐、訂購商品的人能夠立即得到一個回覆。因為回答均都大同小異，因此利用聊天機器人能夠產生一個制式化的回應，來解決買賣中的大小問題。
 
@@ -12,7 +12,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
