@@ -15,12 +15,12 @@ class WakeUpConversation extends Conversation
      */
     public function askReason()
     {
-        $question = Question::create("阿，你把我叫醒了，你需要什麼嗎？")
-            ->fallback('無法問問題')
+        $question = Question::create(__('Ah, you woke me up, what do you need?'))
+            ->fallback(__('Unable to ask questions'))
             ->callbackId('ask_reason')
             ->addButtons([
-                Button::create('講一個笑話')->value('joke'),
-                Button::create('給我一句勵志名言')->value('quote'),
+                Button::create(__('Tell a joke'))->value('joke'),
+                Button::create(__('Give me an inspirational quote'))->value('quote'),
             ]);
 
         return $this->ask($question, function (Answer $answer) {

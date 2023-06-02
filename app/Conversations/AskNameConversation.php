@@ -15,13 +15,12 @@ class AskNameConversation extends Conversation
      */
     public function askName()
     {
-        $question = Question::create("你好，我能知道你的名字嗎？")
-            ->fallback('無法問問題')
+        $question = Question::create(__('Hello, may I know your name?'))
+            ->fallback(__('Unable to ask questions'))
             ->callbackId('ask_name');
-
         return $this->ask($question, function (Answer $answer) {
             $name = $answer->getText();
-            $this->say('很高興認識你，'.$name);
+            $this->say(__('Nice to meet you,') . $name);
         });
     }
 
