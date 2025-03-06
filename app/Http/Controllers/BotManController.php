@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request; 
-use BotMan\BotMan\BotMan;
-use BotMan\BotMan\Messages\Incoming\Answer;
 use App\Conversations\AskNameConversation;
 use App\Conversations\WakeUpConversation;
+use BotMan\BotMan\BotMan;
+use BotMan\BotMan\Messages\Incoming\Answer;
+use Illuminate\Http\Request;
   
 class BotManController extends Controller
 {
@@ -46,12 +46,12 @@ class BotManController extends Controller
         switch (strtolower($message)) {
             case 'hi':
             case 'hello':
-            case '你好':
-            case '哈囉':
+            case __('hi'):
+            case __('hello'):
                 $conversation = new AskNameConversation();
                 break;
             case 'wake up':
-            case '起床':
+            case __('wake up'):
                 $conversation = new WakeUpConversation();
                 break;
         }
@@ -63,6 +63,6 @@ class BotManController extends Controller
      */
     public function getInstruction()
     {
-        $this->botman->reply("請輸入「你好」進行測試...");
+        $this->botman->reply(__("Please enter \"Hello\" to test..."));
     }
 }

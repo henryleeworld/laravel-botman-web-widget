@@ -1,4 +1,4 @@
-# Laravel 10 聊天機器人網頁小工具
+# Laravel 11 聊天機器人網頁小工具
 
 引入 botman 的 botman／driver-web 套件來擴增聊天機器人框架，目的是回應訂餐、訂購商品的人能夠立即得到一個回覆。因為回答均都大同小異，因此利用聊天機器人能夠產生一個制式化的回應，來解決買賣中的大小問題。
 
@@ -22,8 +22,8 @@ $ php artisan key:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/mcehB9K.png)
+![](https://i.imgur.com/Q1ck7xC.png)
 > 在寫回應內容的時候，也需要注意自己使用的詞彙與語氣。需要有禮貌、友善，但也不要過度官方
 
-![](https://i.imgur.com/BWz7Lgm.png)
+![](https://i.imgur.com/nxZndbI.png)
 > 除了從公司的角度思考，也得試想如果自己是客戶，會想知道什麼問題？怎樣的流程是客戶喜歡的？如何才能引導客戶到他想要的頁面，或是得到客戶需要的資訊
