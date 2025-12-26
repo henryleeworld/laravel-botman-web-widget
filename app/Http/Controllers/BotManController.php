@@ -4,16 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Conversations\AskNameConversation;
 use App\Conversations\WakeUpConversation;
-use BotMan\BotMan\BotMan;
-use BotMan\BotMan\Messages\Incoming\Answer;
-use Illuminate\Http\Request;
   
 class BotManController extends Controller
 {
     /**
      * The value that was retrieved.
-     *
-     * @var mixed
      */
     public $botman;
 
@@ -36,9 +31,6 @@ class BotManController extends Controller
 
     /**
      * Get specific conversation.
-     *
-     * @param string $message
-     *
      */
     protected function startConversation($message)
     {
