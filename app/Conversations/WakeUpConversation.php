@@ -13,7 +13,7 @@ class WakeUpConversation extends Conversation
     /**
      * First question
      */
-    public function askReason()
+    public function askReason(): Conversation
     {
         $question = Question::create(__('Ah, you woke me up, what do you need?'))
             ->fallback(__('Unable to ask questions'))
@@ -38,7 +38,7 @@ class WakeUpConversation extends Conversation
     /**
      * Start the conversation
      */
-    public function run()
+    public function run(): void
     {
         $this->askReason();
     }

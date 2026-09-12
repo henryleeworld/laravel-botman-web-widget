@@ -11,7 +11,7 @@ class AskNameConversation extends Conversation
     /**
      * First question
      */
-    public function askName()
+    public function askName(): Conversation
     {
         $question = Question::create(__('Hello, may I know your name?'))
             ->fallback(__('Unable to ask questions'))
@@ -25,7 +25,7 @@ class AskNameConversation extends Conversation
     /**
      * Start the conversation
      */
-    public function run()
+    public function run(): void
     {
         $this->askName();
     }
